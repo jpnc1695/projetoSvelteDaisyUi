@@ -2,7 +2,6 @@
   import { onMount, onDestroy } from "svelte";
   import { browser } from "$app/environment";
   import type { Map } from "maplibre-gl";
-  import maplibregl from "maplibre-gl";
 
   let mapContainer!: HTMLDivElement; // Definite assignment assertion
   let map: Map;
@@ -26,11 +25,13 @@
   onDestroy(() => {
     map?.remove();
   });
+
 </script>
 
 <div class="map-wrapper">
   <div class="map-container" bind:this={mapContainer} />
 </div>
+
 
 <style>
   .map-wrapper {
@@ -42,7 +43,7 @@
   }
 
   .map-container {
-    width: 80%; /* Largura reduzida para 80% do container pai */
+    width: 100%; /* Largura reduzida para 80% do container pai */
     height: 400px; /* Altura reduzida */
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

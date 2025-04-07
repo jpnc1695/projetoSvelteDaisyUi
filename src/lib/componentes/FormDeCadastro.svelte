@@ -1,8 +1,10 @@
 
-<script>
-    let empresa = {
-      nome: '',
-      cnpj: '',
+<script lang="ts">
+  import type IEmpresa from "$lib/Interface/IEmpresa";
+
+    let empresa: IEmpresa = {
+      nome:"",
+      cnpj:"",
       email: '',
       telefone: '',
       endereco: '',

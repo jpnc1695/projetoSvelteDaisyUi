@@ -23,7 +23,7 @@
       >
         <li><a href="/">Homepage</a></li>
         <li><a href="/mapas">Mapas</a></li>
-        <li><a>About</a></li>
+        <li><a href="/cadastrarempresa">CadastrarEmpresa</a></li>
       </ul>
     </div>
   </div>

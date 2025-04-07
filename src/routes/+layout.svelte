@@ -1,14 +1,20 @@
-<script>
-    import "../app.css";
-    import Footer from "$lib/componentes/Footer.svelte";
-    import Header from "$lib/componentes/Header.svelte";
-  </script>
-  
-  <div class="min-h-screen flex flex-col">
+<script lang="ts">
+  import "../app.css";
+  import { page } from '$app/state';
+  import Footer from "$lib/componentes/Footer.svelte";
+  import Header from "$lib/componentes/Header.svelte";
+
+  $: pathname = page.url.pathname;
+</script>
+
+<div class="min-h-screen flex flex-col">
+  {#if pathname !== "/login"}
     <Header />
-    <main class="flex-grow">
-      <slot />
-    </main>
+  {/if}
+  <main class="flex-grow">
+    <slot />
+  </main>
+  {#if pathname !== "/login"}
     <Footer />
-  </div>
- 
+  {/if}
+</div>
