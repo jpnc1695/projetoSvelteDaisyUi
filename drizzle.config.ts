@@ -9,7 +9,7 @@ if (!databaseUrl) {
 
 export default {
     out: './drizzle',
-    schema: './src/db/schema.ts',
+    schema: './src/server/schema.ts',
     dialect: 'mysql',
     dbCredentials: {
       url: databaseUrl // Agora garantidamente uma string

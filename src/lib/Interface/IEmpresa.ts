@@ -4,5 +4,4 @@ export default interface IEmpresa{
         email: string;
         telefone: string;
         endereco: string;
-        ramo: string;
 }
