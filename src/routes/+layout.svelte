@@ -8,13 +8,13 @@
 </script>
 
 <div class="min-h-screen flex flex-col">
-  {#if pathname !== "/login"}
+  <!-- {#if pathname !== "/"} -->
     <Header />
-  {/if}
+  <!-- {/if} -->
   <main class="flex-grow">
     <slot />
   </main>
-  {#if pathname !== "/login"}
+  <!-- {#if pathname !== "/"} -->
     <Footer />
-  {/if}
+  <!-- {/if} -->
 </div>

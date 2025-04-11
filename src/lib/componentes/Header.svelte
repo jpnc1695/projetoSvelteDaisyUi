@@ -23,7 +23,8 @@
       >
         <li><a href="/">Homepage</a></li>
         <li><a href="/mapas">Mapas</a></li>
-        <li><a href="/cadastrarempresa">CadastrarEmpresa</a></li>
+        <li><a href="/cadastrarempresa">Cadastrar Empresa</a></li>
+        <li><a href="/cadastrarusuario">Cadastrar Usuario</a></li>
       </ul>
     </div>
   </div>
