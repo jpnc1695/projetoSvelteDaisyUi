@@ -40,15 +40,15 @@
       </div>
 
       <div class="form-control">
-        <label class="label" for="password">
+        <label class="label" for="hashedPassword">
           <span class="label-text">Senha*</span>
         </label>
         <input
-          id="password"
-          name="password"
+          id="hashedPassword"
+          name="hashedPassword"
           type="password"
           placeholder="Senha"
-          minlength="8"
+          minlength="6"
           class="input input-bordered"
           required
         />
@@ -63,7 +63,7 @@
           class="input input-bordered"
           type="password"
           placeholder="Senha"
-          minlength="8"
+          minlength="6"
           required
         />
       </div>

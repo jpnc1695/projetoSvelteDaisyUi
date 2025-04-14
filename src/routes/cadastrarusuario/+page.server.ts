@@ -17,10 +17,10 @@ export const actions: Actions = {
     const data = {
       username: formData.get("username") as string,
       email: formData.get("email") as string,
-      password: formData.get("password") as string,
+      hashedPassword: formData.get("hashedPassword") as string,
     };
 
-    const hash = bcrypt.hashSync(data.password?.toString(), 10);
+    const hash = bcrypt.hashSync(data.hashedPassword?.toString(), 10);
     const userId = generateId(7);
 
     try {
@@ -28,18 +28,18 @@ export const actions: Actions = {
         id: userId,
         username: data.username.toString(),
         email: data.email.toString(),
-        password: hash,
+        hashedPassword: hash,
       });
 
-      const token = await createAuthJWT({
-        username: data.username.toString(),
-        email: data.email.toString(),
-        id:userId,
-      });
+      // const token = await createAuthJWT({
+      //   username: data.username.toString(),
+      //   email: data.email.toString(),
+      //   id:userId,
+      // });
 
-      event.cookies.set("auth_token", token,{
-        path:"/"
-      })
+      // event.cookies.set("auth_token", token,{
+      //   path:"/"
+      // })
 
          const [novoUsuario] = await db.select()
             .from(users)
