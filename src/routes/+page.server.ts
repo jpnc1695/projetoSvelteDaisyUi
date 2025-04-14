@@ -9,9 +9,7 @@ export const config = {
 
 export const load:PageServerLoad  = async (event) => {
     // get the sessionId from the cookie
-    const token = event.cookies.get("auth_token");
-    console.log(token)
-  
+    const token = event.cookies.get("auth_token");  
     // if there is a token, redirect to the user page
     if (!token) {
       throw redirect(301, "/login");
