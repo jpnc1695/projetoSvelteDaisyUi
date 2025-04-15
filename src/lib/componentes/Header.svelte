@@ -1,3 +1,9 @@
+<script>
+  import LogoutButton from "$lib/componentes/LogoutButton.svelte"
+</script>
+
+
+
 <div class="navbar bg-base-100 shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
@@ -32,6 +38,8 @@
     <a class="btn btn-ghost text-xl">JPNC</a>
   </div>
   <div class="navbar-end">
+
+    <LogoutButton/>
     <label class="swap swap-rotate">
       <!-- this hidden checkbox controls the state -->
       <input type="checkbox" class=" theme-controller" value="emerald" />

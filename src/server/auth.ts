@@ -52,3 +52,7 @@ export async function validateSession(token: string) {
 export async function deleteSession(sessionId:string){
     await db.delete(session).where(eq(session.id, sessionId))
 }
+
+export async function deleteAllUserSessions(userId: string) {
+  await db.delete(session).where(eq(session.userId, userId));
+}

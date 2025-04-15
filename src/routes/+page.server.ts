@@ -1,18 +1,26 @@
-import { redirect } from '@sveltejs/kit';
-import type { PageServerLoad  } from './$types';
+// import { redirect } from "@sveltejs/kit";
+// import type { PageServerLoad } from "./$types";
+// import { parse } from "cookie";
+// import { validateSession } from "$server/auth";
 
+// export const load: PageServerLoad = async ({ request }) => {
+//   try {
+//     // get the sessionId from the cookie
+//     const cookies = parse(request.headers.get("cookie") || "");
+//     const token = cookies.auth_token;
 
-export const config = {
-    runtime: "nodejs18.x",
-  };
+//     if (!token) {
+//       throw redirect(302, "/login");
+//     }
 
+//     const session = await validateSession(token);
 
-export const load:PageServerLoad  = async (event) => {
-    // get the sessionId from the cookie
-    const token = event.cookies.get("auth_token");  
-    // if there is a token, redirect to the user page
-    if (!token) {
-      throw redirect(301, "/login");
-    }
-  };
+//     return{
+//       userId: session.userId
+//     }
 
+//   } catch (error) {
+//     console.error("Erro na validação da sessão:", error);
+//     throw redirect(302, "/login");
+//   }
+// };
